@@ -1,0 +1,49 @@
+/* 전체공통 임시CSS 반드시 CSS초기화 파일과 함께 쓰세요~ 아랫코드는 임시코드입니다.  */
+* { padding: 0; margin: 0; list-style: none; }
+
+/* 전체를 덮는 배경설정  */
+#header .bg_lnb { display: none; position: absolute; left: 0; top:51px; z-index: 2; width: 100%; background:darkgrey;}
+#header .bg_lnb.dep1 { background: red; }
+#header .bg_lnb.dep2 { background: orange; }
+#header .bg_lnb.dep3 { background: yellow; }
+#header .bg_lnb.dep4 { background: green; }
+#header .bg_lnb.dep5 { background: blue; }
+
+/* 메뉴디자인  */
+#lnb { padding: 20px 20px 0; height:31px; border-bottom: 1px solid grey; }
+/* IE10 이상*/
+#lnb > ul { display: flex; position: relative; z-index: 3; margin: 0 auto; width: 980px;}
+#lnb > ul > li { position: relative; flex:1; }
+
+    /*
+    IE9이상 코드
+    #lnb > ul {position: relative; z-index: 3; margin: 0 auto; width: 980px;}
+    #lnb > ul:after { content:""; display:block; clear:both;}
+    #lnb > ul > li { position: relative; float:left; width:20%;}
+
+    */
+
+/* 1depth 메뉴 디자인 및 키보드 마우스 이벤트  */
+#lnb > ul > li > a { display: block; height: 30px; border:1px solid lightgrey; color: #000; line-height: 30px; text-align: center; text-decoration: none; }
+#lnb > ul > li.bg > a,
+#lnb > ul > li.on > a,
+#lnb > ul > li:hover > a { background:tomato; color: #fff; }
+#lnb > ul > li.dep1.bg ul,
+#lnb > ul > li.dep1:hover ul { background:red; }
+#lnb > ul > li.dep2.bg ul,
+#lnb > ul > li.dep2:hover ul { background:orange; }
+#lnb > ul > li.dep3.bg ul,
+#lnb > ul > li.dep3:hover ul { background:yellow; }
+#lnb > ul > li.dep4.bg ul,
+#lnb > ul > li.dep4:hover ul { background:green; }
+#lnb > ul > li.dep5.bg ul,
+#lnb > ul > li.dep5:hover ul { background:blue; }
+
+  /* 2depth 메뉴 디자인  */
+#lnb > ul > li > ul { display: none; background: #fff; position: absolute; left: 0; top: 30px; z-index: 4; width:100%; box-sizing: border-box; border:1px solid #ccc; }
+#lnb > ul > li > ul > li { border-bottom: 1px solid skyblue; }
+#lnb > ul > li > ul > li a { display: block; height: 20px; line-height: 20px; text-align: center; text-decoration: none; }
+
+  /* 2depth 마우스,키보드 이벤트 디자인  */
+#lnb > ul > li > ul > li a:focus,
+#lnb > ul > li > ul > li:hover a { background: skyblue; color:blue; }

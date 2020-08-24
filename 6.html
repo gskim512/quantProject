@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>개인 퀀트 시스템 개발 프로젝트</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1><a href="index.html">개인 퀀트 시스템 개발 프로젝트</a></h1> 2020.08.24. 시작
+    <ol>
+      <li><a href="1.html">프로젝트 선정 이유</a></li>
+      <li><a href="2.html">필요 기술</a></li>
+      <li><a href="3.html">필요 데이터</a></li>
+      <li><a href="4.html">원하는 기능</a></li>
+      <li><a href="5.html">프로젝트 진행 순서</a></li>
+      <li><a href="6.html">주차별 개발 계획</a></li>
+      <li><a href="7.html">개발 방법</a></li>
+    </ol>
+    <img src="quant.jpg" width="100%">
+    <p style="margin-top:30px;">
+    <h2><strong>주차별 개발 계획</strong></h2>
+    <ul>
+      <li>1주차 계획
+        <ul>
+          <li>DB 구축 : 크롤링, 지표계산, DB적재
+           [크롤링 할 3가지]
+           - 코스피, 코스닥 종목별 정보 (네이버 증권)
+           - 각 종목별 2년간의 수정주가 정보 (네이버 증권 차트)
+           - 각 종목별 재무제표 (FnGuide에서 제공하는 재무제표)
+           [DB에 적재할 3가지]
+           - 코스피, 코스닥 종목별 정보
+           - 각 종목별 2년간의 수정주가 정보
+           - 재무제표 기반으로 계산한 퀀트 지표 정보
+          </li>
+          <li>프론트엔드 : 웹페이지 뼈대(HTML+CSS) 구축
+           참고소스 : Newpaper 형식의 웹페이지(<a href="https://codepen.io/oliviale/pen/BaoXOOP" target="_blank">https://codepen.io/oliviale/pen/BaoXOOP</a>)
+           큰 틀의 느낌만 참고하고, 레이아웃 구성은 내가 원하는 형태로 재구성
+           레이아웃은 크게 3가지 영역으로 나누었다.
+        	주식 차트 영역 / 퀀트 정보 영역 / 사이드바 영역(퀀트 별 순위)
+           주식 차트의 경우 Highchart API를 활용.
+           간단히 종목의 날짜별 주가 정보만 입력하면 주식차트를 그릴 수 있는 간편한 API.
+           나머지의 영역의 경우 필요한 항목들을 부트스트랩을 활용하여 구성.
+          </li>
+        </ul>
+      </li>
+      <br>
+      <li>2주차 계획
+        <ul>
+          <li>프론트엔드 : 웹페이지 기능(자바스크립트) 구축</li>
+          <li>백엔드 : 날짜별 주가 정보 API, 퀀트 정보 API, 퀀트 순위 API 개발</li>
+        </ul>
+      </li>
+      <br>
+      <li>3주차 계획
+        <ul>
+          <li>프론트엔드 <-> 백엔드 <-> DB 연결 구축</li>
+          <li>크롤링 자동화 구축</li>
+        </ul>
+      </li>
+    </ul>
+    </P>
+  </body>
+</html>
